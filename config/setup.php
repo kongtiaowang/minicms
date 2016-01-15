@@ -1,7 +1,13 @@
 <?php
 
 
-$mysqli = new mysqli("https://wangshen101-minicms.rhcloud.com/phpmyadmin/", "adminjqqLlfC", "b7_1GyDweEX5", "wangshen101");
+$mysqli = new mysqli(
+    getenv('OPENSHIFT_MYSQL_DB_HOST'), 
+    getenv('OPENSHIFT_MYSQL_DB_USERNAME'), 
+    getenv('OPENSHIFT_MYSQL_DB_HOST'), 
+    getenv('OPENSHIFT_MYSQL_DB_PASSWORD'),
+    getenv('OPENSHIFT_MYSQL_DB_PORT')
+);
  
 /* check connection */ 
 if (mysqli_connect_errno()) {
