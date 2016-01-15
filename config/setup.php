@@ -1,7 +1,7 @@
 <?php
 
 
-$mysqli = new mysqli("localhost", "wang", "As6311773", "WsCmS");
+$mysqli = new mysqli("https://wangshen101-minicms.rhcloud.com/phpmyadmin/", "adminjqqLlfC", "b7_1GyDweEX5", "wangshen101");
  
 /* check connection */ 
 if (mysqli_connect_errno()) {
