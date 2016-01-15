@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-1.0.3.min.js"></script>
+    <script src="js/app.js"></script>
+     <!-- Latest compiled and minified CSS -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+
+  </head>
+  <body ng-app="funwithcountries" >
+
+      <h1> Fun With Countries </h1>
+   
+      <div ng-controller="countriesctrl">
+         <ul ng-repeat="c in countries">
+            <li>
+                  {{c.name}}  
+            </li>
+            <ul ng-controller="bbcontroller">
+               <li ng-repeat="s in c.states" style="border: 1px solid blue;margin:5px;" >
+                ---- {{s.name}}
+            </li>
+            <input type="text" name="state" ng-model="newState">
+            <button ng-click="addStateTo(c)"> Add State </button>
+            </ul>
+          </ul>
+         
+      </div>
+  </body>
+</html>
